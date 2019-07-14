@@ -1,0 +1,134 @@
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 212px;
+  bottom: 0;
+  left: 0;
+  background: url(G:\Programs\Digis\client\images\footer-bg.png);
+  animation: animate 10s linear infinite;
+}
+
+.wave:before {
+  content: "";
+  width: 100%;
+  height: 212px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  background: url(G:\Programs\Digis\client\images\footer-bg.png);
+  animation: animate-reverse 10s linear infinite;
+  z-index: 0;
+}
+
+.wave:after {
+  content: "";
+  width: 100%;
+  height: 212px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  background: url(G:\Programs\Digis\client\images\footer-bg.png);
+  animation-delay: -5s;
+  animation: animate 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 1920px;
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    background-position: 1920px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+.wave__war {
+  padding-top: 60px;
+  display: flex;
+}
+
+.wave__icons {
+  padding-top: 70px;
+}
+.submarine {
+  background-image: url(G:\Programs\Digis\client\images\submarine-left.svg);
+  width: 100px;
+  height: 80px;
+  z-index: 2;
+}
+
+.torpedo_first,
+.torpedo_second,
+.torpedo_third {
+  background-image: url(G:\Programs\Digis\client\images\torpedo.svg);
+  width: 50px;
+  height: 20px;
+  z-index: 2;
+  margin-left: 50px;
+}
+
+.torpedo_first {
+  margin-top: 70px;
+}
+.torpedo_second {
+  margin-top: 10px;
+}
+
+.torpedo_third {
+  margin-top: 50px;
+}
+
+.twitter,
+.gmail {
+  margin-left: 10px;
+}
+
+.facebook {
+  background-image: url(G:\Programs\Digis\client\images\facebook.svg);
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.twitter {
+  background-image: url(G:\Programs\Digis\client\images\twitter.svg);
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.gmail {
+  background-image: url(G:\Programs\Digis\client\images\gmail.svg);
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.wave__shark {
+  margin-top: 60px;
+  background-image: url(G:\Programs\Digis\client\images\shark.svg);
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .wave__shark {
+    display: none;
+  }
+
+  .wave__war {
+    display: none;
+  }
+}

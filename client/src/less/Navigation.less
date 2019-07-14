@@ -1,0 +1,54 @@
+@menuTop: 12px;
+@menuRight: 28px;
+@weightText: 600;
+@menuLogo: 30px;
+@textCenter: center;
+@menuCollapseTopBottom: 20px;
+@btnDangerRadius: 6px;
+
+.navbar-toggler {
+  outline: none !important;
+  border: 0;
+}
+
+.nav-link {
+  font-size: 1em !important;
+  padding-top: @menuTop;
+}
+
+.btn-outline-danger {
+  font-weight: @weightText;
+  border-width: 1.5px !important;
+  border-radius: @btnDangerRadius;
+}
+
+.nav-item {
+  font-weight: @weightText;
+}
+
+.navbar-nav li {
+  padding-right: @menuRight;
+}
+
+.navbar-nav {
+  padding-right: @menuRight;
+}
+
+.navbar-brand {
+  font-size: @menuLogo;
+}
+
+@media (max-width: 767px) {
+  .nav-link {
+    text-align: @textCenter;
+  }
+
+  .navbar-nav {
+    padding-right: @menuRight - @menuRight;
+    padding-bottom: @menuCollapseTopBottom;
+    padding-top: @menuCollapseTopBottom;
+  }
+  .navbar-nav li {
+    padding-right: @menuRight - @menuRight;
+  }
+}

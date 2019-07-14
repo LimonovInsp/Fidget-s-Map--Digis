@@ -1,0 +1,146 @@
+@gradient: linear-gradient(-45deg, #ee7752, #ac4cec, #f3d347, #23d5ab);
+@bgSize: 400% 400%;
+@bgWidth: 100%;
+@bgHeight: 950px;
+@relative: relative;
+@animation: change 10s ease-in-out infinite;
+@spaceHeight: 500px;
+@spaceShadow: 0px 0px 4.5px 0px rgba(0, 0, 0, 0.45);
+@textAlign: center;
+@spaceDescription: #1f2833;
+@spaceImageSize: 100px;
+@spaceWidth: 55%;
+
+.big-bg {
+  margin: 0;
+  padding: 0;
+  background-image: @gradient;
+  background-size: @bgSize;
+  width: @bgWidth;
+  height: @bgHeight;
+  position: @relative;
+  animation: @animation;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.about_space {
+  width: @spaceWidth;
+  background: #fff;
+  height: @spaceHeight;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+.info_image {
+  margin: 50px auto 0;
+  width: @spaceImageSize;
+  height: @spaceImageSize;
+  background: url(G:\Programs\Digis\client\images\author.jpg);
+  border-radius: 50%;
+  -webkit-box-shadow: @spaceShadow;
+  -moz-box-shadow: @spaceShadow;
+  box-shadow: @spaceShadow;
+}
+
+.info_headline {
+  margin: 20px auto 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info_description {
+  text-align: @textAlign;
+  font-size: 15px;
+  color: @spaceDescription;
+  margin: 25px auto 0;
+  line-height: 1.7;
+  font-weight: bold;
+}
+
+.info_additionDescription {
+  text-align: @textAlign;
+  font-size: 15px;
+  color: @spaceDescription;
+  margin: 30px auto 0;
+  font-weight: bold;
+}
+
+@media (max-width: 1361px) {
+  .about_space {
+    width: @spaceWidth + 15%;
+  }
+}
+
+@media (max-width: 1069px) {
+  .about_space {
+    width: @spaceWidth + 20%;
+    height: @spaceHeight + 60px;
+  }
+}
+
+@media (max-width: 770px) {
+  .big-bg {
+    height: @bgHeight + 150px;
+  }
+  .about_space {
+    height: @spaceHeight + 150px;
+  }
+}
+
+@media (max-width: 559px) {
+  .big-bg {
+    height: @bgHeight + 200px;
+  }
+  .about_space {
+    height: @spaceHeight + 250px;
+  }
+}
+
+@media (max-width: 455px) {
+  .big-bg {
+    height: @bgHeight + 300px;
+  }
+  .about_space {
+    height: @spaceHeight + 350px;
+  }
+}
+
+@media (max-width: 407px) {
+  .about_space {
+    width: @spaceWidth + 35%;
+  }
+}
+
+@media (max-width: 436px) {
+  .info_headline {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .info_headline {
+    font-size: 15px;
+  }
+  .big-bg {
+    height: @bgHeight + 340px;
+  }
+  .about_space {
+    height: @spaceHeight + 370px;
+  }
+}
+
+@media (max-width: 300px) {
+  .info_headline {
+    font-size: 10px;
+  }
+}
