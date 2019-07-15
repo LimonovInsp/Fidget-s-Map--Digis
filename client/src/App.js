@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
+import Dashboard from "./components/Dashboard";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/sign-in" component={Signin} />
           <Route path="/sign-up" component={Signup} />
+          <Route path="/dashboard" component={Dashboard} />
         </Switch>
       </Router>
     );
