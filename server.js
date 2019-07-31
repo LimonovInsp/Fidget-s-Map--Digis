@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const { dbURI } = require("./config/keys");
 const users = require("./routes/users");
+const path = require("path");
 // Connect
 
 app.use(function(req, res, next) {
@@ -24,5 +25,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.use("/api/users", users);
+
+//Serve static assets if in production
+if (process.env.NODE_ENV === "production") {
+  //Set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
+
+const PORT = process.env.PORT || 5000;
 // Listen
-app.listen(5000, () => console.log(`Listening at port 5000`));
+app.listen(PORT, () => console.log(`Listening at port ${PORT}`));

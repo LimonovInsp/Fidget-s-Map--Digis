@@ -16,12 +16,10 @@ class Slider extends Component {
           <div className="carousel-item active" data-interval="5000">
             <img
               className="d-block w-100"
-              src="../images/greatnessofcity.jpg"
+              src="..\..\images\greatnessofcity.jpg"
             />
             <div className="carousel-caption" id="firstSlide">
-              <h1 className="display-2 animated fadeInLeft">
-                Welcome to Fidget's map!
-              </h1>
+              <h1 className="display-2 animated fadeInLeft">Welcome</h1>
               <h3 className="animated fadeInRight">
                 It's time to assay a convenient application
               </h3>
@@ -36,7 +34,7 @@ class Slider extends Component {
             </div>
           </div>
           <div className="carousel-item" data-interval="5000">
-            <img className="d-block w-100" src="../images/ocean.jpg" />
+            <img className="d-block w-100" src="..\..\images\ocean.jpg" />
             <div className="carousel-caption" id="secondSlide">
               <h2 className="display-4 animated bounceInDown">
                 Enjoy opportunities to travel with quality map navigation
@@ -44,7 +42,7 @@ class Slider extends Component {
             </div>
           </div>
           <div className="carousel-item" data-interval="5000">
-            <img className="d-block w-100" src="../images/peopleimage.jpg" />
+            <img className="d-block w-100" src="..\..\images\peopleimage.jpg" />
             <div className="carousel-caption" id="thirdSlide">
               <h2 className="display-4 animated bounceInUp">
                 It's impossible to get lost here

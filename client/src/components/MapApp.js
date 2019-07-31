@@ -285,6 +285,7 @@ class MapApp extends Component {
             ]}
             google={this.props.google}
             onClick={this.onClick}
+            gestureHandling="greedy"
             zoom={10}
             style={style}
             center={position}
