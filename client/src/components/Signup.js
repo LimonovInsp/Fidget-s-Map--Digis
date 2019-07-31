@@ -25,7 +25,7 @@ class Signup extends Component {
     };
 
     axios
-      .post("http://localhost:5000/api/users/sign-up", newUser)
+      .post("/users/sign-up", newUser)
       .then(res => this.props.history.push("/sign-in"))
       .catch(err =>
         this.setState({

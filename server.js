@@ -24,7 +24,7 @@ mongoose
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
-app.use("/api/users", users);
+app.use("/users", users);
 
 //Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
@@ -36,6 +36,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 // Listen
-app.listen(PORT, () => console.log(`Listening at port ${PORT}`));
+app.listen(port, () => console.log(`Listening at port ${port}`));

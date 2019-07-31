@@ -38,7 +38,13 @@ module.exports = {
     })
   ],
   devServer: {
-    historyApiFallback: true
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 8080,
+    historyApiFallback: true,
+    proxy: {
+      "/users/**": { target: "http://localhost:5000", secure: false }
+    }
   },
   performance: { hints: false }
 };
