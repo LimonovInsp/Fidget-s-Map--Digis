@@ -19,7 +19,9 @@ class Slider extends Component {
               src="..\..\images\greatnessofcity.jpg"
             />
             <div className="carousel-caption" id="firstSlide">
-              <h1 className="display-2 animated fadeInLeft">Welcome</h1>
+              <h1 className="display-2 animated fadeInLeft">
+                Welcome to Fidget's map!
+              </h1>
               <h3 className="animated fadeInRight">
                 It's time to assay a convenient application
               </h3>
